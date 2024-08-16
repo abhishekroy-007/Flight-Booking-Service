@@ -1,0 +1,301 @@
+{
+	"info": {
+		"_postman_id": "c5c1f985-6220-43fc-b8cb-b7773abf4ce5",
+		"name": "FLight",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16589108"
+	},
+	"item": [
+		{
+			"name": "User Management System",
+			"item": [
+				{
+					"name": "Create User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\" : \"Abhishek R\",\n    \"email\" : \"abhishek@gmail.com\",\n    \"phone_number\" : \"98765432125\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8900/v1/createUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8900",
+							"path": [
+								"v1",
+								"createUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\" : \"Abhishek R\",\n    \"email\" : \"abhishek@gmail.com\",\n    \"phone_number\" : \"9876543212\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8900/v1/getUserByPhoneNumber?phoneNumber=",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8900",
+							"path": [
+								"v1",
+								"getUserByPhoneNumber"
+							],
+							"query": [
+								{
+									"key": "phoneNumber",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Flight Management System",
+			"item": [
+				{
+					"name": "Create Flight",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"airline_id\" : \"12345\",\n    \"origin\" : \"Delhi\",\n    \"destination\" : \"Mumbai\",\n    \"start_time\" : \"2024-12-05 21:36:49\",\n    \"end_time\" : \"2024-12-05 23:36:49\",\n    \"total_premium_seats\" : \"20\",\n    \"total_economy_seats\" : \"20\",\n    \"total_business_seats\" : \"20\",\n    \"base_fare\" : \"5000\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8900/v1/createFlight",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8900",
+							"path": [
+								"v1",
+								"createFlight"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search Flights By Origin, Destination, Time Of Fly",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\" : \"Abhishek R\",\n    \"email\" : \"abhishek@gmail.com\",\n    \"phone_number\" : \"9876543212\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8900/v1/getFlightByOriginAndDestinationAndTimeOfFly?origin=Delhi&destination=Mumbai&timeOfFly=2024-12-05 21:36:48&endTimeOfFly=2024-12-05 23:36:50",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8900",
+							"path": [
+								"v1",
+								"getFlightByOriginAndDestinationAndTimeOfFly"
+							],
+							"query": [
+								{
+									"key": "origin",
+									"value": "Delhi"
+								},
+								{
+									"key": "destination",
+									"value": "Mumbai"
+								},
+								{
+									"key": "timeOfFly",
+									"value": "2024-12-05 21:36:48"
+								},
+								{
+									"key": "endTimeOfFly",
+									"value": "2024-12-05 23:36:50"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Fare Management System",
+			"item": [
+				{
+					"name": "Get Fare Of Booking",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\" : \"Abhishek R\",\n    \"email\" : \"abhishek@gmail.com\",\n    \"phone_number\" : \"9876543212\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8900/v1/getFlightByOriginAndDestinationAndDataOfFly?origin=Delhi&destination=Mumbai&timeOfFly=2024-12-05 12:36:49",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8900",
+							"path": [
+								"v1",
+								"getFlightByOriginAndDestinationAndDataOfFly"
+							],
+							"query": [
+								{
+									"key": "origin",
+									"value": "Delhi"
+								},
+								{
+									"key": "destination",
+									"value": "Mumbai"
+								},
+								{
+									"key": "timeOfFly",
+									"value": "2024-12-05 12:36:49"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Booking Management System",
+			"item": [
+				{
+					"name": "Search Flights By Origin, Destination, Time Of Fly",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\" : \"Abhishek R\",\n    \"email\" : \"abhishek@gmail.com\",\n    \"phone_number\" : \"9876543212\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8900/v1/getFlightByOriginAndDestinationAndTimeOfFly?origin=Delhi&destination=Mumbai&timeOfFly=2024-12-05 21:36:48&endTimeOfFly=2024-12-05 23:36:50",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8900",
+							"path": [
+								"v1",
+								"getFlightByOriginAndDestinationAndTimeOfFly"
+							],
+							"query": [
+								{
+									"key": "origin",
+									"value": "Delhi"
+								},
+								{
+									"key": "destination",
+									"value": "Mumbai"
+								},
+								{
+									"key": "timeOfFly",
+									"value": "2024-12-05 21:36:48"
+								},
+								{
+									"key": "endTimeOfFly",
+									"value": "2024-12-05 23:36:50"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create A Booking",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"airline_id\" : \"12345\",\n    \"origin\" : \"Delhi\",\n    \"destination\" : \"Mumbai\",\n    \"start_time\" : \"2024-12-05 21:36:49\",\n    \"end_time\" : \"2024-12-05 23:36:49\",\n    \"total_premium_seats\" : \"20\",\n    \"total_economy_seats\" : \"20\",\n    \"total_business_seats\" : \"20\",\n    \"base_fare\" : \"5000\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8900/v1/createFlight",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8900",
+							"path": [
+								"v1",
+								"createFlight"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
