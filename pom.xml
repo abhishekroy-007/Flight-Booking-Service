@@ -63,11 +63,6 @@
 	</dependencies>
 
 	<repositories>
-		<repository>
-			<id>hspay-tax-sdk</id>
-			<name>hspay-tax-sdk</name>
-			<url>https://nexus.hotstar-labs.com/hspay-tax-sdk/</url>
-		</repository>
 	</repositories>
 
 	<build>
